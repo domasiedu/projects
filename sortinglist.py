@@ -11,10 +11,19 @@ def descending_Order(num):
 print(descending_Order(2376489011))
 
 
-# second function  works differently
+# Second function
 
-def descending_Order1(num1):
+def descending_Order1(num):
+    return int("".join(sorted(str(num), reverse=True)))
+
+
+print(descending_Order1(2376489011))
+
+
+# Third function  works differently
+
+def descending_Order2(num1):
     return int(str(num1)[::-1])
 
 
-print(descending_Order1(23764890))
+print(descending_Order2(2376489011))
