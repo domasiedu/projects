@@ -9,8 +9,39 @@ class Node:
     def __init__(self, data):
         self.data = data
 
+    def search(self, key):
+        """
+        Search for te first node containing data that matches the key
+        Return the node or None if not found
+
+        Takes O(n) time
+        """
+        current = self.head
+
+        while current:
+            if current.data == key:
+                return current
+            else:
+                current = current.next_node
+        return None
+
     def __repr__(self):
-        return "Node data: %s>" % self.data  # "%s" is Python way of substituting something into a string.
+
+        nodes = []
+        current = self.head
+
+        while current:
+            if current is self.head:
+                nodes.append("[Head: %s]" % current.data)
+            elif current.next_node is None:
+                nodes.append("[Tail: %s]" % current.data)
+            else:
+                nodes.append("[%s]" % current.data)
+
+            current = current.next_node
+        return '->'.join(nodes)
+
+        # return "Node data: %s>" % self.data  # "%s" is Python way of substituting something into a string.
 
 
 class LinkedList:
