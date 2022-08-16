@@ -15,10 +15,8 @@ for i in range(0, size):
 # Printing in reverse order
 """
 # First Print option
-
 for i in range(size - 1, -1, -1):
     print(arr[i], end=' ')
-
 """
 # Second Print Option
 
