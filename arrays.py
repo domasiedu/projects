@@ -14,3 +14,4 @@ new_list.extend([4, 5, 6, 7, 8])
 new_list.sort()
 # We have .insert() and .delete() as well
 print(new_list)
+
