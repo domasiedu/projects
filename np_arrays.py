@@ -39,4 +39,5 @@ np_weight_kg = np.array(weight_kg)
 # Create np_weight_lbs from np_weight_kg 2.2 lbs per kg
 np_weight_lbs = np_weight_kg * 2.2
 
+#print(np_weight_lbs)
 print(np_weight_lbs)
