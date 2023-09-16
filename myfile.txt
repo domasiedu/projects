@@ -1,0 +1,4 @@
+hello this is some junk text
+for sample programming
+in pythn.
+This is will be used for all kinds of text on my codes.
