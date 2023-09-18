@@ -706,7 +706,7 @@ for x in chain(a,b):
 print('\n')
 #Flattening a nested sequence 4.14
 
-from collections import Iterable
+from collections.abc import Iterable
 
 def flatten(items, ignore_types=(str, bytes)):
     for x in items:
@@ -750,3 +750,41 @@ print('ACME','50',60,9.5)
 print('ACME','50',60,9.5, sep=',')
 print('ACME','50',60,9.5, sep=',',end='!!\n')
 
+print('\n')
+
+for i in range(5):
+    print(i)
+for i in range(5):
+    print(i, end=' ')
+
+print('\n')
+
+row = ('ACME', 50, 91.5)
+print(*row, sep= ',')
+
+print('\n')
+
+#You want to write data to a file, but only if it doesn’t already exist on the filesystem.
+with open('somefile', 'wt') as f:
+    f.write('Hello\n')
+
+#below executes it perfectly
+#with open('somefile1', 'xt') as f:
+#    f.write('Hello-there\n')
+
+print('\n')
+
+#reading/writing data in compression gzip
+import gzip
+with gzip.open('somefile.gz', 'rt') as f:
+    text = f.read()
+
+print('\n')
+
+import csv
+with open('stock.csv') as f:
+    f_csv = csv.reader(f)
+    headers = next(f_csv)
+    for row in f_csv:
+        print(row)
+        
