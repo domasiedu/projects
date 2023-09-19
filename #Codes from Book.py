@@ -787,4 +787,6 @@ with open('stock.csv') as f:
     headers = next(f_csv)
     for row in f_csv:
         print(row)
-        
+
+print('\n')
+
